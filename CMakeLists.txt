@@ -14,6 +14,10 @@ configure_file (
 # add the binary tree to the search path for include files
 # so that we will find TutorialConfig.h
 include_directories("${PROJECT_BINARY_DIR}")
-     
+
+# Create a sources variable with a link to all cpp files to compile
+set(SRC_LIST
+    src/example.cpp
+) 
 # add the executable
-add_executable(mockcpp_example example.cpp)
+add_executable(mockcpp_example ${SRC_LIST})
